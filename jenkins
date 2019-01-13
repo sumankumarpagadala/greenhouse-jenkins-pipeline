@@ -1,0 +1,10 @@
+node ('maven') {
+    stage ('cloning source code'){
+    //pulling source code from git
+    git 'https://github.com/sumankumarpagadala/greenhouse.git'
+    }
+    stage ('building package'){
+        //packaging
+        sh 'mvn clean package'
+    }
+}
